@@ -18,29 +18,29 @@ Import the `goptr` package in your Go program to use the provided utility functi
 
 ```go
 import (
-"fmt"
-"github.com/wilinz/goptr"
+	"fmt"
+	"github.com/wilinz/goptr"
 )
 
 type Person struct {
-Name   *string
-Age    *int
-Height *float64
+	Name   *string
+	Age    *int
+	Height *float64
 }
 
 func main() {
 
-// Create a Person struct with pointers to basic data types
-person := Person{
-Name:   goptr.Ptr("John Doe"),
-Age:    goptr.Ptr(30),
-Height: goptr.Ptr(1.75),
-}
+	// Create a Person struct with pointers to basic data types
+	person := Person{
+		Name:   goptr.Ptr("John Doe"),
+		Age:    goptr.Ptr(30),
+		Height: goptr.Ptr(1.75),
+	}
 
-// Dereference the pointers to access the values
-fmt.Println(*person.Name)   // John Doe Or fmt.Println(goptr.Unptr(person.Name))
-fmt.Println(*person.Age)    // 30 Or fmt.Println(goptr.Unptr(person.Age))
-fmt.Println(goptr.Unptr(person.Height)) // 1.75
+	// Dereference the pointers to access the values
+	fmt.Println(*person.Name)               // John Doe Or fmt.Println(goptr.Unptr(person.Name))
+	fmt.Println(*person.Age)                // 30 Or fmt.Println(goptr.Unptr(person.Age))
+	fmt.Println(goptr.Unptr(person.Height)) // 1.75
 }
 ```
 
