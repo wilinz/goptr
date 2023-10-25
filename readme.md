@@ -38,9 +38,9 @@ Height: goptr.Ptr(1.75),
 }
 
 // Dereference the pointers to access the values
-fmt.Println(*person.Name)   // John Doe
-fmt.Println(*person.Age)    // 30
-fmt.Println(*person.Height) // 1.75
+fmt.Println(*person.Name)   // John Doe Or fmt.Println(goptr.Unptr(person.Name))
+fmt.Println(*person.Age)    // 30 Or fmt.Println(goptr.Unptr(person.Age))
+fmt.Println(goptr.Unptr(person.Height)) // 1.75
 }
 ```
 
